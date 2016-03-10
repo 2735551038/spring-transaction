@@ -13,6 +13,7 @@ public class AccountDaoImpl extends JdbcDaoSupport implements AccountDao {
 	@Override
 	public void inMoney(String in, int money) {
 		String sql = "update account set money = money + ? where name = ? ";
+		int i =1/0;
 		this.getJdbcTemplate().update(sql, money, in);
 	}
 
